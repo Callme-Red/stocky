@@ -72,7 +72,7 @@ export default function ProductFormFields({
           />
           <FieldInput
             name="Título"
-            placeholder="Ej: Hilo dental, alambre"
+            placeholder="Nombre del producto"
             id="title"
             className='w-full lg:w-2/3 lg:ml-2 mt-2 lg:mt-0'
             classNameInput="h-10"
