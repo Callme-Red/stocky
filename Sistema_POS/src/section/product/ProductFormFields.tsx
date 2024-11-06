@@ -66,12 +66,13 @@ export default function ProductFormFields({
             id="code"
             className="w-full lg:w-1/3"
             value={formData.code}
-            readonly
-            disabled
+            // readonly
+            // disabled
+            onChange={(e)=>setFormData({...formData,code: e.target.value})}
           />
           <FieldInput
-            name="Titulo"
-            placeholder="Ej: Hilo dental, brackets, alambre"
+            name="Título"
+            placeholder="Ej: Hilo dental, alambre"
             id="title"
             className='w-full lg:w-2/3 lg:ml-2 mt-2 lg:mt-0'
             classNameInput="h-10"

@@ -65,11 +65,11 @@ export default function Login() {
           </header>
 
           <main className="mt-10">
-            <h2 className="text-primary text-2xl font-semibold">Hola, bienvenido</h2>
+            <h2 className="text-primary text-2xl font-semibold text-center">Hola, bienvenido</h2>
             <p className="font-medium text-whiting">Inicia sesión para poder acceder al sistema</p>
 
             <form onSubmit={handleSubmit} className="mt-3">
-              <FieldInput onChange={(e) => handleChangeUser("email", e.target.value)} className="mt-8" classNameInput="h-10" autofocus name="Correo electrónico" id="email" />
+              <FieldInput onChange={(e) => handleChangeUser("email", e.target.value)} className="mt-8" classNameInput="h-10" autofocus name="Correo electrónico" id="email"/>
 
               <div className="mt-3">
                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-primary">Contraseña</label>
@@ -98,7 +98,7 @@ export default function Login() {
 
               <div className="w-full text-center mt-5">
                 <span className="text-seconda font-semibold text-sm inline-block">
-                  ¿Has olvidado tu contraseña? <span className="text-[#005bd3] cursor-pointer hover:underline">Cámbiala</span>
+                  ¿Has olvidado tu contraseña? <span className="text-[#005bd3] cursor-pointer hover:underline">Click Aqui</span>
                 </span>
               </div>
             </form>
