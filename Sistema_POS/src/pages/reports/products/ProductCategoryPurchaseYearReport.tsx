@@ -1,0 +1,45 @@
+import { useState } from "react";
+import { getBestBuyingCategoryProductsYear } from "../../../api/inventory/products";
+import { SalesByCategoryProductsProps } from "../../../types/types";
+import Container from "../../../layout/Container";
+import ModalYearSales from "../../../section/reports/ModalYearSales";
+import BestSellingCategoryProducts from "../BestSellingCategoryProducts";
+import PDFContainer from "../../../layout/PDFContainer";
+
+export default function ProductCategoryYearReport() {
+  const [isShowModal, setIsShowModal] = useState(true);
+  const [products, setProducts] = useState<SalesByCategoryProductsProps | null>(null);
+  const [datesYear, setDatesYear] = useState({
+    startDate: '',
+    endDate: ''
+  });
+
+  async function onApplyYearBuyingCategoryProducts(year: number) {
+    const startDate = new Date(year, 0, 1);
+    const endDate = new Date(year, 11, 31);
+    setDatesYear({ startDate: startDate.toLocaleDateString(), endDate: endDate.toLocaleDateString() })
+
+    const { data } = await getBestBuyingCategoryProductsYear(year);
+
+    setProducts(data);
+  }
+
+
+  return (
+    <Container>
+      <div className="h-full">
+        {isShowModal && <ModalYearSales onApply={onApplyYearBuyingCategoryProducts} onClose={() => setIsShowModal(false)} />}
+        {products && (
+          <PDFContainer name="Reporte de categoria mas compradas anualmente">
+            <BestSellingCategoryProducts
+              name="Reporte de categoria mas compradas anualmente"
+              products={products}
+              startDate={datesYear.startDate}
+              endDate={datesYear.endDate}
+            />
+          </PDFContainer>
+        )}
+      </div>
+    </Container>
+  );
+}

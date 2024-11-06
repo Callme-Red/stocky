@@ -1,0 +1,22 @@
+#app {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "aside main main";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 60px 1fr;
+}
+
+@media (max-width: 1024px) {
+  #app {
+    grid-template-areas:
+      "header header header"
+      "main main main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+  }
+
+  aside {
+    height: calc(100% - 60px);
+  }
+}
