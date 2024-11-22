@@ -1,6 +1,6 @@
 # Sistema de Punto de Venta Stocky
 
-#### Video Demo: [URL del video aquí]
+#### Video Demo: https://youtu.be/C2Jk64_U0vU
 
 #### Descripción:
 Este proyecto es un sistema de punto de venta desarrollado utilizando **Django REST Framework** en el backend y **React con TypeScript** en el frontend. También incorpora **HTML**, **CSS**, y **Tailwind CSS** para el diseño y la interfaz de usuario. Está diseñado para pequeñas y medianas empresas, proporcionando herramientas completas para la gestión de ventas, inventarios y clientes.
