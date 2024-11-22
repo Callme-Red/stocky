@@ -74,7 +74,7 @@ class saleDetailSerializer(serializers.ModelSerializer):
         model = SaleDetail
         fields = ['IDSaleDetail','IDSale','IDProduct','productCode','stock','productPrice','productName','quantity','subTotal','discount','tax','total','state','date']  
 
-   
+
     def get_stock(self, obj):
         try:
             inventario = Inventario.objects.filter(IDProducto=obj.IDProduct).order_by('-fecha').first()

@@ -29,7 +29,7 @@ export default function ProductPurchaseYearReport() {
       <div className="h-full">
         {isShowModal && <ModalYearSales onApply={onApplyYearSales} onClose={() => setIsShowModal(false)} />}
         {products && (
-          <PDFContainer name="Reporte de productos mas comprados anualmente">
+          <PDFContainer name= "Reporte de productos mas comprados anualmente">
             <BestBuyingProducts
               products={products}
               startDate={datesYear.startDate}

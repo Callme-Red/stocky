@@ -75,16 +75,16 @@ const BestBuyingProducts = ({ products = [], startDate, endDate }: { products: B
         <View style={styles.table}>
           <View style={[styles.tableRow, styles.tableColHeader]}>
             <View style={styles.tableCol}>
-              <Text>Producto</Text>
+              <Text>Códico</Text>
             </View>
             <View style={styles.tableCol}>
-              <Text>Codigo</Text>
+              <Text>Producto</Text>
             </View>
             <View style={[styles.tableCol, { textAlign: 'right' }]}>
               <Text>Cantidad comprada</Text>
             </View>
             <View style={[styles.tableCol, { textAlign: 'right' }]}>
-              <Text>Total ganado</Text>
+              <Text>Total ($)</Text>
             </View>
           </View>
 
@@ -97,10 +97,10 @@ const BestBuyingProducts = ({ products = [], startDate, endDate }: { products: B
                 <Text>{NombreProducto}</Text>
               </View>
               <View style={[styles.tableCol, { textAlign: 'right' }]}>
-                <Text>{currencyFormatter(total_spent)}</Text>
+                <Text>{total_quantity}</Text>
               </View>
               <View style={[styles.tableCol, { textAlign: 'right' }]}>
-                <Text>{total_quantity}</Text>
+                <Text>{currencyFormatter(total_spent)}</Text>
               </View>
             </View>
           ))}

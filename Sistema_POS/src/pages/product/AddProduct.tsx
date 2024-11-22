@@ -109,7 +109,7 @@ export default function ProductForm() {
         <Toaster />
         <section className="flex flex-col items-center h-full">
           <div className="max-w-screen-lg mt-5 w-full mx-auto">
-            <SubHeader title='Agregar producto' />
+            <SubHeader title='Agregar productos' />
             <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col lg:flex-row items-start">
               <div className="flex-1 w-full lg:w-auto">
                 <ProductFormFields

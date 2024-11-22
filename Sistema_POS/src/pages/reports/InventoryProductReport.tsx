@@ -75,11 +75,11 @@ const InventoryProductReport = ({ products = [] }: { products: ProductsProps[] }
               <Text>Codigo</Text>
             </View>
             <View style={styles.tableCol}>
-              <Text>Esperado</Text>
+              <Text>Existencias</Text>
             </View>
-            <View style={styles.tableCol} >
+            {/* <View style={styles.tableCol} >
               <Text>Existente</Text>
-            </View>
+            </View> */}
           </View>
 
           {products && products.map(({ NombreProducto, CodigoProducto, existencias }, index) => (
@@ -93,7 +93,7 @@ const InventoryProductReport = ({ products = [] }: { products: ProductsProps[] }
               <View style={styles.tableCol}>
                 <Text>{existencias}</Text>
               </View>
-              <View style={styles.tableCol} />
+              {/* <View style={styles.tableCol} /> */}
             </View>
           ))}
         </View>
